@@ -14,10 +14,6 @@ public class PlayerController : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform gunEndPosition;
 
-    public float fireRate = 0.2f;
-    private float timeSinceLastAction = 0f;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -29,19 +25,11 @@ public class PlayerController : MonoBehaviour
     {
         PlayerMovement();
 
-        if (Input.GetKey(KeyCode.Space))
+        if 
+            (Input.GetKey(KeyCode.Space))
         {
             Shoot();
         }
-
-        if (hp <= 0)
-        {
-            Debug.Log("koniec gry");
-            Application.Quit();
-
-        }
-
-
     }
 
     void PlayerMovement()
@@ -63,20 +51,6 @@ public class PlayerController : MonoBehaviour
 
     void Shoot()
     {
-        timeSinceLastAction += Time.deltaTime;
-
-        if (timeSinceLastAction >= fireRate)
-        {
-
-            Instantiate(bulletPrefab, gunEndPosition.position, Quaternion.identity);
-            timeSinceLastAction = 0;
-        }
-    }
-
-    public void HittedByBullet()
-    {
-        hp = hp - 1;
-        //1
-        Debug.Log("Trafiono");
+        Instantiate(bulletPrefab, gunEndPosition.position, Quaternion.identity);
     }
 }
