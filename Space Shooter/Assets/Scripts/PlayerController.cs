@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public int hp = 3;
-
     public float moveSpeed = 2f;
 
     public Transform minXValue;
@@ -13,6 +11,9 @@ public class PlayerController : MonoBehaviour
 
     public GameObject bulletPrefab;
     public Transform gunEndPosition;
+
+    public float fireRate = 0.2f;
+    private float timeSinceLastAction = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +52,13 @@ public class PlayerController : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bulletPrefab, gunEndPosition.position, Quaternion.identity);
-    }
+        timeSinceLastAction += Time.deltaTime;
+
+        if (timeSinceLastAction >= fireRate)
+
+        {
+            Instantiate(bulletPrefab, gunEndPosition.position, Quaternion.identity);
+            timeSinceLastAction = 0;
+        }
+    }  
 }
