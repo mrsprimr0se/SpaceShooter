@@ -70,5 +70,6 @@ public class PlayerController : MonoBehaviour
     public void HittedByBullet()
     {
         hp = hp - 1;
+        Debug.Log("Trafiono");
     }
 }

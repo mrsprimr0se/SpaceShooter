@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public float speed = 2f;
+    public float speed = 0.6f;
 
     public Transform playerTransform;
 
@@ -27,7 +27,14 @@ public class EnemyController : MonoBehaviour
     {
         transform.Translate(Vector2.down * speed * Time.deltaTime);
 
+        if (transform.position.y > -2)
         Shoot();
+
+        if (transform.position.y < -5.5f)
+        {
+            GameManager.playerController.HittedByBullet();
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

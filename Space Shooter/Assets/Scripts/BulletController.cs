@@ -13,12 +13,13 @@ public class BulletController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = Vector2.up * moveSpeed;
+        //rb.velocity = Vector2.up * moveSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
+        transform.Translate(Vector2.up * moveSpeed * Time.deltaTime);
         DestroyAfterLeftScreen();
     }
 
