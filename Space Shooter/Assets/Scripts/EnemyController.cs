@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -21,8 +22,8 @@ public class EnemyController : MonoBehaviour
     {
         GameObject playerGameObject = GameObject.Find("Player");
         playerTransform = playerGameObject.transform;
-
     }
+
 
     // Update is called once per frame
     void Update()
@@ -44,9 +45,10 @@ public class EnemyController : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
-
             Destroy(gameObject);
         }
+
+   
 
         if (collision.gameObject.tag == "Player")
         {
@@ -57,7 +59,6 @@ public class EnemyController : MonoBehaviour
 
     void Shoot()
     {
-        
         timeSinceLastAction += Time.deltaTime;
 
         if (timeSinceLastAction >= fireRate)

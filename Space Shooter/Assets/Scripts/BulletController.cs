@@ -13,6 +13,7 @@ public class BulletController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+       
         //rb.velocity = Vector2.up * moveSpeed;
     }
 
@@ -33,6 +34,7 @@ public class BulletController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
         Destroy(gameObject);
     }
 }
