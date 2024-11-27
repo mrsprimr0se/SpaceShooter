@@ -35,7 +35,11 @@ public class PlayerController : MonoBehaviour
         }
 
         if (hp <= 0)
-            Debug.Log("Player nie zyje");
+        {
+            Debug.Log("koniec gry");
+            Application.Quit();
+        }
+           
     }
 
     void PlayerMovement()
@@ -69,7 +73,11 @@ public class PlayerController : MonoBehaviour
 
     public void HittedByBullet()
     {
+        // hp = 2
+        GameManager.uiManager.DisableHpSprite(hp);
+
         hp = hp - 1;
+        //1
         Debug.Log("Trafiono");
     }
 }

@@ -13,6 +13,8 @@ public class EnemyBulletController : MonoBehaviour
 
     private Vector3 direction;
 
+    public GameObject bulletExplosionEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +46,8 @@ public class EnemyBulletController : MonoBehaviour
         
         if (collision.gameObject.tag == "Bullet")
         {
+            Instantiate(bulletExplosionEffect, transform.position, Quaternion.identity);
+
             Destroy(gameObject);
         }
          

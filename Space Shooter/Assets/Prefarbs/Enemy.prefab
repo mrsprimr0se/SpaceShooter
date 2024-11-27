@@ -196,9 +196,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8c0b1af1161e7d419ed93746e8ce7b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 0.5
   playerTransform: {fileID: 0}
-  fireRate: 1
+  fireRate: 2.5
   bulletPrefab: {fileID: 6244027139213361602, guid: fcf8bc3f182236941ad0bdff1733e542, type: 3}
   enemyGunEnd: {fileID: 858015528801930057}
   explosionEffectPrefab: {fileID: 2796489818331176824, guid: 68f4a353f84dd7b42aca933dc877e7a0, type: 3}
