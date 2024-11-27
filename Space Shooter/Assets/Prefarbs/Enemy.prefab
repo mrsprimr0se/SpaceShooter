@@ -201,6 +201,7 @@ MonoBehaviour:
   fireRate: 1
   bulletPrefab: {fileID: 6244027139213361602, guid: fcf8bc3f182236941ad0bdff1733e542, type: 3}
   enemyGunEnd: {fileID: 858015528801930057}
+  explosionEffectPrefab: {fileID: 2796489818331176824, guid: 68f4a353f84dd7b42aca933dc877e7a0, type: 3}
 --- !u!50 &2833625587916009526
 Rigidbody2D:
   serializedVersion: 4

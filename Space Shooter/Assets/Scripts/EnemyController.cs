@@ -14,6 +14,8 @@ public class EnemyController : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform enemyGunEnd;
 
+    public GameObject explosionEffectPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +43,8 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
+            Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
+
             Destroy(gameObject);
         }
 
