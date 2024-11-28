@@ -9,9 +9,16 @@ public class BulletController : MonoBehaviour
 
     public float destroyYValue = 6f;
 
+    public AudioSource audioSource;
+
+    public AudioClip audioClip;
+
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<AudioSource>().playOnAwake = false;
+        GetComponent<AudioSource>().clip = audioClip;
+
         rb = GetComponent<Rigidbody2D>();
        
         //rb.velocity = Vector2.up * moveSpeed;
@@ -35,6 +42,37 @@ public class BulletController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        Destroy(gameObject);
+            if (collision.gameObject.tag == "Enemy")
+              {
+
+                GetComponent<AudioSource>().Play();
+
+                Destroy(gameObject,0.6f);
+             }
+
+            if (collision.gameObject.tag == "EnemyBullet")
+        {
+            Destroy(gameObject);
+        }
+            
+                
+
+      //if (collision.gameObject.tag == "Enemy")
+
+        {
+            //Destroy(gameObject);
+        }
+        
+
+      //if (collision.gameObject.tag == "EnemyBullet")
+
+        {
+            //Destroy(gameObject);
+        }
+        
+        
     }
+
+
+
 }
