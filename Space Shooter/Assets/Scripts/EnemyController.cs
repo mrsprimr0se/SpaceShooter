@@ -17,6 +17,7 @@ public class EnemyController : MonoBehaviour
 
     public GameObject explosionEffectPrefab;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +40,7 @@ public class EnemyController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
