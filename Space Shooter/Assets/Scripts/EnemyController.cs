@@ -17,6 +17,10 @@ public class EnemyController : MonoBehaviour
 
     public GameObject explosionEffectPrefab;
 
+    [SerializeField]
+    private AudioClip _explosionClip;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +52,7 @@ public class EnemyController : MonoBehaviour
         {
             Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            AudioSource.PlayClipAtPoint(_explosionClip, transform.position);
         }
 
    
@@ -56,7 +61,9 @@ public class EnemyController : MonoBehaviour
         {
             GameManager.playerController.HittedByBullet();
             Destroy(gameObject);
+            AudioSource.PlayClipAtPoint(_explosionClip, transform.position);
         }
+
     }
 
     void Shoot()

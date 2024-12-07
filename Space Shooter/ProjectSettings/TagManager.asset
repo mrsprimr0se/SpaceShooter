@@ -10,6 +10,8 @@ TagManager:
   - FxTemporaire
   - Audio
   - Enemy
+  - Gift
+  - CollectableItem
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - UI
   - BulletEnemy
   - GunEnd
-  - 
+  - CollectableItem
   - 
   - 
   - 
