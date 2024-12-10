@@ -64,9 +64,9 @@ public class EnemyController : MonoBehaviour
             AudioSource.PlayClipAtPoint(_explosionClip, transform.position);
         }
 
-    }
+        }
 
-    void Shoot()
+        void Shoot()
     {
         timeSinceLastAction += Time.deltaTime;
 

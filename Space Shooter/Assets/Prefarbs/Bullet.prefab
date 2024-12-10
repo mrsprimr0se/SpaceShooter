@@ -105,6 +105,7 @@ MonoBehaviour:
   moveSpeed: 3
   rb: {fileID: 0}
   destroyYValue: 6
+  zebranePunkty: 0
 --- !u!50 &4107846891959675834
 Rigidbody2D:
   serializedVersion: 4

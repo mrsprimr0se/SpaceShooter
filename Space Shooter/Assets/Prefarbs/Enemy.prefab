@@ -204,6 +204,7 @@ MonoBehaviour:
   enemyGunEnd: {fileID: 858015528801930057}
   explosionEffectPrefab: {fileID: 2796489818331176824, guid: 68f4a353f84dd7b42aca933dc877e7a0, type: 3}
   _explosionClip: {fileID: 8300000, guid: a9656d4c27651094ba5ca2876decdb30, type: 3}
+  bulletController: {fileID: 414873477769411090, guid: 4ede817c8ab713247842dbd0c2dee9ab, type: 3}
 --- !u!50 &2833625587916009526
 Rigidbody2D:
   serializedVersion: 4

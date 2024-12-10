@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - Gift
   - CollectableItem
+  - Iglo
   layers:
   - Default
   - TransparentFX

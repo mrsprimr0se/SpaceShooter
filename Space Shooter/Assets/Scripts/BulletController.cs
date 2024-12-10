@@ -10,7 +10,10 @@ public class BulletController : MonoBehaviour
 
     public float destroyYValue = 6f;
 
-   
+    public int points = 10;
+
+    public BulletController bulletController;
+
     //public AudioSource audioSource;
 
     //public AudioClip audioClip;
@@ -46,11 +49,13 @@ public class BulletController : MonoBehaviour
     {
 
             if (collision.gameObject.tag == "Enemy")
-              {
-            
-                //GetComponent<AudioSource>().Play();
+            {
+            ScoreManager scoreManager = FindObjectOfType<ScoreManager>();
+                 scoreManager.AddScore(points);
 
-                Destroy(gameObject);
+            //GetComponent<AudioSource>().Play();
+
+            Destroy(gameObject);
              }
 
             if (collision.gameObject.tag == "EnemyBullet")

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class UiManager : MonoBehaviour
@@ -7,6 +8,7 @@ public class UiManager : MonoBehaviour
     public GameObject hp1;
     public GameObject hp2;
     public GameObject hp3;
+
 
     public List<GameObject> hpPointsList = new List<GameObject>();
 
@@ -19,7 +21,7 @@ public class UiManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
     /* Player HP
