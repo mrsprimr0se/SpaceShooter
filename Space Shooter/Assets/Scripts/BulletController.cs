@@ -14,6 +14,8 @@ public class BulletController : MonoBehaviour
 
     public BulletController bulletController;
 
+    public int zebranePunkty;
+
     //public AudioSource audioSource;
 
     //public AudioClip audioClip;

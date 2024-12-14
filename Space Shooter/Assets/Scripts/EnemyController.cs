@@ -20,6 +20,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private AudioClip _explosionClip;
 
+    public BulletController bulletController;   
+
 
 
     // Start is called before the first frame update
@@ -50,6 +52,8 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
+            bulletController.zebranePunkty++;
+            Debug.Log(bulletController.zebranePunkty);
             Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
             AudioSource.PlayClipAtPoint(_explosionClip, transform.position);

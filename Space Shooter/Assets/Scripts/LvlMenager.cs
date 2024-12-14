@@ -9,6 +9,9 @@ public class LvlMenager : MonoBehaviour
 
     public PlayerController playerController;
 
+    public BulletController bulletController;   
+
+
     private void Start()
     {
         // Initially hide the "Press E" text
@@ -41,7 +44,7 @@ public class LvlMenager : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         // Check if the collision is with a specific object (e.g., an NPC or interactable object)
-        if (collider.gameObject.CompareTag("Player"))
+        if (collider.gameObject.tag == "Player") 
         {
             // Show the "Press E" text
             hints.gameObject.SetActive(true);
@@ -53,9 +56,12 @@ public class LvlMenager : MonoBehaviour
         if (collider.gameObject.tag == "Player")
         {
             if (Input.GetKey(KeyCode.E))
+         
             {
-                // Load the next scene
-                LoadNextLevel();
+                
+                 // Load the next scene
+                    LoadNextLevel();
+                
             }
         }
         // Function to load the next scene

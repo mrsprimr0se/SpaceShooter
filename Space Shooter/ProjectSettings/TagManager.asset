@@ -23,9 +23,9 @@ TagManager:
   - BulletEnemy
   - GunEnd
   - CollectableItem
-  - 
-  - 
-  - 
+  - GroundLayer
+  - Player
+  - Ground
   - 
   - 
   - 
