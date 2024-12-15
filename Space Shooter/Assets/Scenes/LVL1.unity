@@ -2161,6 +2161,7 @@ MonoBehaviour:
   hints: {fileID: 488878902}
   playerController: {fileID: 6931540117327942503}
   bulletController: {fileID: 0}
+  textToHide: {fileID: 0}
 --- !u!61 &1750493712
 BoxCollider2D:
   m_ObjectHideFlags: 0

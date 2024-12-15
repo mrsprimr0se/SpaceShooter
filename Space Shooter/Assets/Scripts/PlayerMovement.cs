@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     bool crouch = false;
 
+    public PlayerMovement player;
+
     // Update is called once per frame
     void Update()
     {
@@ -33,6 +35,19 @@ public class PlayerMovement : MonoBehaviour
             crouch = false;
         }
 
+        if (player.transform.position.y < -3.52f)
+        {
+            Debug.Log("Koniec gry.");
+        }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Coins"))
+        {
+            Destroy(other.gameObject);
+        }
     }
 
     void FixedUpdate()

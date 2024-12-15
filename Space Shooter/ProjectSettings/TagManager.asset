@@ -13,6 +13,7 @@ TagManager:
   - Gift
   - CollectableItem
   - Iglo
+  - Coins
   layers:
   - Default
   - TransparentFX

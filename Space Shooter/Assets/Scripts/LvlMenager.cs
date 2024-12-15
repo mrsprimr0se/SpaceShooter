@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using TMPro;
+using UnityEngine.UI;
 
 public class LvlMenager : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class LvlMenager : MonoBehaviour
 
     public PlayerController playerController;
 
-    public BulletController bulletController;   
+    public BulletController bulletController;
 
 
     private void Start()
@@ -37,7 +38,9 @@ public class LvlMenager : MonoBehaviour
 
             // Optionally hide the text again after interaction
             hints.gameObject.SetActive(false);
+
         }
+
     }
 
 
@@ -49,6 +52,7 @@ public class LvlMenager : MonoBehaviour
             // Show the "Press E" text
             hints.gameObject.SetActive(true);
         }
+
     }
 
     private void OnTriggerStay2D(Collider2D collider)
@@ -58,12 +62,15 @@ public class LvlMenager : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
          
             {
-                
-                 // Load the next scene
-                    LoadNextLevel();
+
+                // Load the next scene
+                LoadNextLevel();
                 
             }
         }
+
+ 
+
         // Function to load the next scene
         void LoadNextLevel()
         {
