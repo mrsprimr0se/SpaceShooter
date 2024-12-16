@@ -15,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
 
     public PlayerMovement player;
 
+    public AudioSource audioPlayer;
+ 
+
     // Update is called once per frame
     void Update()
     {
@@ -42,13 +45,23 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.gameObject.CompareTag("Coins"))
+        if (collision.gameObject.CompareTag("Coins"))
         {
-            Destroy(other.gameObject);
+            Destroy(collision.gameObject);
         }
+
+        
+
+        if (collision.gameObject.tag == "Coins")
+        {
+            audioPlayer.Play();
+        }
+
     }
+
+    
 
     void FixedUpdate()
     {
